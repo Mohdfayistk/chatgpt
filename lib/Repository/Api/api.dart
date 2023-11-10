@@ -10,10 +10,11 @@ class AnimeApi {
   ApiClient apiClient = ApiClient();
 
   Future<Chatgpt> getAnime(String text) async {
-    String trendingpath = 'https://ai-chatbot.p.rapidapi.com/chat/free?message=$text&uid=user1';
-    var body = {
+    String trendingpath = 'https://chatgpt-gpt4-ai-chatbot.p.rapidapi.com/ask';
+    var body =  {
+      "query": text
     };
-    Response response = await apiClient.invokeAPI(trendingpath, 'GET', body);
+    Response response = await apiClient.invokeAPI(trendingpath, 'POST', body);
 
     return Chatgpt.fromJson(jsonDecode(response.body));
   }

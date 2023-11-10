@@ -23,9 +23,8 @@ class ApiClient {
       case "POST":
         response = await post(Uri.parse(url),
             headers: {
-              'content-type': 'application/x-www-form-urlencoded',
               'X-RapidAPI-Key': '01673c7b0bmshdd2b55740649d24p1a6f97jsn6d1f0f405626',
-              'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
+              'X-RapidAPI-Host': 'chatgpt-gpt4-ai-chatbot.p.rapidapi.com'
             },
             body: body);
 
